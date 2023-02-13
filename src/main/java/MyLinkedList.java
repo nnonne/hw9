@@ -23,6 +23,7 @@ public class MyLinkedList<T> {
         System.out.println("New object was added, current size = " + size);
     }
     public void remove(int index){
+        if (index < 0) throw new IndexOutOfBoundsException();
         if (size == 0) throw new IndexOutOfBoundsException();
         if (index+1 > size) throw new IndexOutOfBoundsException();
         if (index == 0 ){
@@ -63,6 +64,7 @@ public class MyLinkedList<T> {
         return size;
     }
     public T get(int index){
+        if (index < 0) throw new IndexOutOfBoundsException();
         if (index + 1 > size){
             throw new IndexOutOfBoundsException();
         }
