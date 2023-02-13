@@ -31,6 +31,7 @@ public class MyArrayList {
         System.out.println("New value " + value + " was added, current length = " + currentLength);
     }
     public void remove(int index){
+        if (index < 0) throw new IndexOutOfBoundsException();
         if (currentLength - 1 >= index){
             Object[] newArray = new Object[currentLength - 1];
             System.arraycopy(arrayList,0,newArray,0,index);
@@ -51,6 +52,7 @@ public class MyArrayList {
         return currentLength;
     }
     public Object get(int index){
+        if (index < 0) throw new IndexOutOfBoundsException();
         if (currentLength - 1 >= index) {
             return arrayList[index];
         }
