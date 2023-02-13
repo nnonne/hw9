@@ -32,6 +32,7 @@ public class MyStack <S>{
 
     }
     public void remove(int index){
+        if (index < 0) throw new IndexOutOfBoundsException();
         if (size == 0) throw new IndexOutOfBoundsException();
         if (index+1 > size) throw new IndexOutOfBoundsException();
         if (index == 0 ){
